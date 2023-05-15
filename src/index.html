@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/main/hero.html')
+      @include('partials/main/offers.html')
+      @include('partials/main/rating.html')
+      @include('partials/main/info.html')
+      @include('partials/main/categories.html')
+      @include('partials/main/useful.html')
+      @include('partials/main/registration.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</body>
+
+</html>

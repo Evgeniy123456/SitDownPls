@@ -1,0 +1,149 @@
+.header {
+
+  &__background {
+    background-color: #F7F7F7;
+
+    @include tablet {
+      background-color: #ffffff;
+    }
+  }
+
+  &__background-tablet {
+    display: none;
+
+    @include tablet {
+      display: block;
+      padding: 9.4px 0;
+      background-color: #F7F7F7;
+    }
+
+    @media (max-width: 850px) {
+      padding: 16px 0;
+    }
+
+    @media (max-width: 710px) {
+      display: none;
+    }
+  }
+
+  &__top {
+    width: 100%;
+    padding: 3px 0;
+
+    @include tablet {
+      padding: 7px 0;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__select {
+
+    @include mobile {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__tel {
+    margin-right: 15px;
+    min-width: 145px;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    @include mobile {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__center {
+    height: 92px;
+
+    @include mobile {
+      height: auto;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @media (max-width: 850px) {
+      display: block;
+      width: 17%;
+    }
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include mobile {
+      grid-template-columns: repeat(6, 1fr);
+      row-gap: 16px;
+    }
+  }
+
+  &__search {
+    grid-column: 1/8;
+
+    @include tablet {
+      grid-column: 1/9;
+    }
+
+    @include mobile {
+      grid-column: 1/7;
+      border-radius: 10px;
+    }
+  }
+
+  &__categories {
+    grid-column: 8/11;
+
+    @include tablet {
+      grid-column: 9/13;
+    }
+
+    @include mobile {
+      grid-column: 1/7;
+    }
+  }
+
+  &__personel {
+    grid-column: 12/13;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__personel--prizrak {
+    min-width: 105px;
+
+    @include tablet {
+      display: block;
+    }
+
+    @media (max-width: 850px) {
+      display: none;
+    }
+  }
+
+  &__personel--850 {
+    display: none;
+
+    @media (max-width: 850px) {
+      display: block;
+    }
+  }
+
+  &__nav {
+
+    @media (max-width: 850px) {
+      display: none;
+    }
+  }
+}
