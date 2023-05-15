@@ -1,0 +1,79 @@
+.card-swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+
+  @include tablet {
+    height: 70%;
+  }
+
+  @include small-tablet {
+    height: 100%;
+  }
+
+  @include mobile {
+    height: 60%;
+  }
+}
+
+.mySwiper {
+  height: 30%;
+  box-sizing: border-box;
+  padding: 10px 0;
+
+  @include tablet {
+    height: 28%;
+  }
+
+  @media (max-width:768px) and (min-width: 577px) {
+
+    position: absolute;
+    top: 142%;
+    left: -17%;
+    height: 65%;
+    max-width: 349px;
+    transform: rotate(90deg);
+  }
+
+  @include mobile {
+    height: 40%;
+  }
+
+}
+
+.mySwiper .card-swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.6;
+
+  @media (max-width:768px) and (min-width: 577px) {
+    transform: rotate(-90deg);
+  }
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.card-swiper-slide img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+//при наличии нормальных
+//картинок слайдера удалить данные стили
+.mySwiper2 {
+  margin-bottom: 15px;
+  // height: 100%;
+}

@@ -1,0 +1,345 @@
+.header {
+
+  // .header__tel
+  &__tel {
+
+    svg use {
+      fill: var(--orange-color);
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 14px;
+      color: var(--orange-color);
+    }
+  }
+
+  .tel {
+    padding: 3px 5px;
+    transition: color .3s ease-in-out, fill .3s ease-in-out, background-color .3s ease-in-out;
+
+    &:hover .tel-icon use,
+    &:hover .tel-link {
+      color: #FFBD59;
+      fill: #FFBD59;
+    }
+
+    &:focus {
+      background-color: #FFF5D1;
+      outline: none;
+    }
+
+    &:active .tel-icon use,
+    &:active .tel-link {
+      color: #BB370E;
+      fill: #BB370E;
+    }
+
+    .tel-link {
+      outline: none;
+    }
+  }
+
+  // .header__info
+  &__info {
+    max-width: 710px;
+    width: 100%;
+  }
+
+  &__info--prizrok {
+    width: 80%;
+
+    @media (max-width: 850px) {
+      min-width: 100%;
+    }
+  }
+
+  &__info--1920 {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__info-list {
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 5px;
+  }
+
+  &__info-item {
+    padding: 2px 4px;
+    font-size: 14px;
+    transition: color .3s ease-in-out, background-color .3s ease-out;
+
+    &:hover {
+      color: var(--violet-primary-color);
+    }
+
+    &:focus-visible {
+      color: var(--violet-primaryD-color);
+      background-color: var(--violet-pink-color);
+      outline: none;
+    }
+
+    &:active {
+      color: var(--violet-primaryD-color);
+    }
+  }
+
+  // .header__logo
+  &__logo {
+    padding: 32px 0;
+    margin-right: 20px;
+    min-width: 188px;
+
+    @media (max-width:850px) {
+      margin: 0;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    a {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__logo-320 {
+    display: none;
+
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  // .header__nav
+  &__nav {
+    max-width: 950px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 700px;
+    }
+
+    &-list {
+      width: 100%;
+      flex-wrap: wrap;
+
+      a {
+        padding: 2px 4px;
+        outline: none;
+        transition: color .3s ease-in-out, background-color .3s ease-in-out;
+      }
+
+      li:hover a {
+        color: var(--violet-primary-color);
+      }
+
+      li a:focus-visible {
+        color: var(--violet-primaryD-color);
+        background-color: var(--violet-pink-color);
+      }
+
+      li a:active {
+        color: var(--violet-primaryD-color);
+      }
+    }
+  }
+
+  .form {
+    padding: 12px 16px 12px 32px;
+    width: 100%;
+    height: 60px;
+    background-color: #F6F6F6;
+    border-radius: 10px 0 0 10px;
+    transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+    cursor: pointer;
+
+
+    @include mobile {
+      border-radius: 10px;
+      padding-right: 32px;
+    }
+
+    &:focus {
+      outline: 2px solid var(--violet-primary-color);
+      outline-offset: -2px;
+      background-color: var(--violet-pinkL-color);
+    }
+
+    &:focus .form__input,
+    &:focus .form__label-svg {
+      background-color: var(--violet-pinkL-color);
+    }
+
+    &:hover {
+      background-color: #EAEAEA;
+    }
+
+    &:hover .form__input {
+      background-color: #EAEAEA;
+    }
+
+    &:hover .form__label-svg {
+      background-color: #EAEAEA;
+    }
+
+    // .form__label
+    &__label {
+
+      &-svg {
+        fill: var(--grey-color);
+        background-color: #F6F6F6;
+        transition: background-color .3s ease-in-out;
+      }
+    }
+
+    // .form__input
+    &__input {
+      padding-left: 8px;
+      padding-right: 15px;
+      background-color: #F6F6F6;
+      outline: none;
+      width: 100%;
+      font-size: 16px;
+      line-height: 18.2px;
+      transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+      &::placeholder {
+        color: var(--grey-color);
+      }
+
+      &:focus::placeholder {
+        color: var(--black-color);
+      }
+
+      &:focus-visible {
+        background-color: #F6F6F6;
+      }
+
+      &:hover {
+        background-color: #EAEAEA;
+      }
+
+      &:active {
+        background-color: #EAEAEA;
+      }
+    }
+
+    // .form__btn
+    &__btn {
+      outline: none;
+
+      svg circle,
+      svg path {
+        transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+      }
+
+      &:hover svg circle {
+        fill: var(--violet-primary-color);
+        stroke: var(--violet-primary-color);
+      }
+
+      &:hover svg path {
+        stroke: var(--light-color);
+      }
+
+      &:focus-visible svg circle {
+        fill: var(--violet-primaryL-color);
+        stroke: var(--violet-primary-color);
+      }
+
+      &:focus-visible svg path {
+        stroke: var(--light-color);
+      }
+
+      &:active svg circle {
+        fill: var(--violet-primaryD-color);
+        stroke: var(--violet-primaryD-color);
+      }
+
+      &:active svg path {
+        stroke: var(--light-color);
+      }
+    }
+  }
+
+  &__personel {
+
+    a {
+      display: inline-block;
+      padding: 2px 3px;
+      fill: var(--violet-primary-color);
+      transition: fill .3s ease-in-out, background-color .3s ease-in-out;
+      outline: none;
+
+      &:hover {
+        fill: var(--violet-primaryL-color);
+      }
+
+      &:focus-visible {
+        fill: var(--light-color);
+        background-color: var(--violet-primaryL-color)
+      }
+
+      &:active {
+        fill: var(--violet-primaryD-color);
+      }
+    }
+
+    a:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    &-block {
+      position: relative;
+      padding: 2px 3px 0 14px;
+      outline: none;
+      transition: fill .3s ease-in-out, background-color .3s ease-in-out;
+
+      &:hover .header__personel-svg {
+        fill: var(--violet-primaryL-color);
+      }
+
+      &:focus-visible {
+        background-color: var(--violet-primaryL-color);
+      }
+
+      &:focus-visible .header__personel-svg {
+        fill: var(--light-color);
+      }
+
+      &:active .header__personel-svg {
+        fill: var(--violet-primaryD-color);
+        background-color: none;
+      }
+    }
+
+    &-number {
+      position: absolute;
+      top: 20%;
+      right: 30px;
+      @include flex-all-center;
+      width: 14px;
+      height: 17px;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 100%;
+      color: var(--light-color);
+      background-color: var(--orange-color);
+      border-radius: 100px;
+    }
+
+    &-svg {
+      fill: var(--violet-primary-color);
+      transition: fill .3s ease-in-out, background-color .3s ease-in-out;
+    }
+  }
+}

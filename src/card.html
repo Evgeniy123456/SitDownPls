@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/card/breadcrumb.html')
+      @include('partials/card/card.html')
+      @include('partials/card/products.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</body>
+
+</html>

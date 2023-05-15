@@ -1,0 +1,154 @@
+.products {
+  padding-top: 30px;
+  padding-bottom: 70px;
+
+  @include small-tablet {
+    padding-top: 14px;
+  }
+
+  // .products__title
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--black-color);
+  }
+
+  // .products__swiper-button-prev
+  &__swiper-button-prev {
+    top: 4.5%;
+    left: 92.7%;
+    width: 32px;
+    height: 32px;
+    outline: none;
+
+    svg,
+    svg path,
+    svg circle {
+      transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+    }
+
+    &:focus-visible svg,
+    &:focus-visible path {
+      fill: var(--violet-primaryL-color);
+      stroke: var(--light-color);
+    }
+    &:focus-visible circle {
+      stroke: var(--violet-primary-color);
+    }
+
+    &:hover svg,
+    &:hover svg path {
+      fill: var(--violet-primary-color);
+      stroke: var(--light-color);
+    }
+
+    &:active svg,
+    &:active svg circle,
+    &:active svg path {
+      fill: var(--violet-primaryD-color);
+      stroke: var(--light-color);
+    }
+
+    @include tablet {
+      left: 89%;
+    }
+
+    @include small-tablet {
+      left: 80%;
+    }
+
+    @media (max-width:620px) {
+      top: 106%;
+      left: 41%;
+    }
+
+    @include mobile {
+      top: 111%;
+      left: 38.5%;
+    }
+  }
+
+  // .products__swiper-button-next
+  &__swiper-button-next {
+    top: 4.5%;
+    left: 96.4%;
+    width: 32px;
+    height: 32px;
+    outline: none;
+
+    svg,
+    svg path,
+    svg circle {
+      transition: fill .3s ease-in-out, stroke .3s ease-in-out;
+    }
+
+    &:focus-visible svg,
+    &:focus-visible path {
+      fill: var(--violet-primaryL-color);
+      stroke: var(--light-color);
+    }
+    &:focus-visible circle {
+      stroke: var(--violet-primary-color);
+    }
+
+    &:hover svg,
+    &:hover svg path {
+      fill: var(--violet-primary-color);
+      stroke: var(--light-color);
+    }
+
+    &:active svg,
+    &:active svg circle,
+    &:active svg path {
+      fill: var(--violet-primaryD-color);
+      stroke: var(--light-color);
+    }
+
+    @include tablet {
+      left: 93.3%;
+    }
+
+    @include small-tablet {
+      left: 86.6%;
+    }
+
+    @media (max-width:620px) {
+      top: 106%;
+      left: 54%;
+    }
+
+    @include mobile {
+      top: 111%;
+      left: 52%;
+    }
+  }
+
+  // .products__card
+  &__card {
+    // position: relative;
+    min-height: 360px;
+
+    @include mobile {
+      min-height: 248px;
+    }
+  }
+
+  &__card-btn {
+    width: auto;
+  }
+
+  // .catalog__card-image
+  &__card-image {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+  content: '';
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+  content: '';
+}

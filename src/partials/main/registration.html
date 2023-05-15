@@ -1,0 +1,93 @@
+<section class="registration">
+  <div class="container">
+    <div class="registration__grid">
+
+      <div class="registration__block">
+
+        <h5 class="registration__header caption">Мы всегда вам рады!</h5>
+
+          <div class="registration__header-descr">
+            Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность распределения внутренних резервов и ресурсов.
+            <button class="btn-reset" id="button" aria-describedby="tooltip">
+              <svg width="14" height="14" fill="#FF862F">
+                <use xlink:href="img/sprite.svg#tooltip"></use>
+              </svg>
+            </button>
+            <div id="tooltip" role="tooltip">
+              Реплицированные с зарубежных источников, исследования формируют глобальную сеть.
+              <div id="arrow" data-popper-arrow></div>
+            </div>
+          </div>
+
+
+        <form class="registration-form" action="mail.php" method="POST">
+          <div class="relativ" style="width: 100%;">
+            <input
+            name="name"
+            type="text"
+            class="input-reset registration-form__input registration-form__input-name"
+            placeholder="Как вас зовут?"
+            autocomplete="on"
+            data-validate-field="name"
+            >
+            <div class="just-validate-error-label"></div>
+          </div>
+
+          <div class="relativ" style="width: 100%;">
+            <input
+            name="phone"
+            type="tel"
+            class="input-reset registration-form__input registration-form__input-tel"
+            placeholder="Ваш телефон"
+            autocomplete="on"
+            data-validate-field="tel"
+            data-validate-rules="phone"
+            >
+            <div class="just-validate-error-label"></div>
+          </div>
+
+          <div class="relativ" style="width: 100%;">
+            <input
+              name="email"
+              type="email"
+              class="input-reset registration-form__input registration-form__input-email"
+              placeholder="Ваш e-mail"
+              autocomplete="on"
+              data-validate-field="mail"
+            >
+            <div class="just-validate-error-label"></div>
+          </div>
+
+          <button class="btn-reset registration-form__btn" data-graph-path="registrationThanks">Отправить</button>
+
+          <div class="relativ">
+            <label class="custom-checkbox" style="width: 100%;">
+              <input
+              type="checkbox"
+              required
+              class="custom-checkbox__field"
+              data-validate-field="checkbox"
+              >
+              <span class="custom-checkbox__content al-i-center">Принимаю<a href="#"> пользовательское соглашение</a></span>
+            </label>
+          </div>
+
+        </form>
+
+        <div class="graph-modal">
+          <div class="cardthanks-container graph-modal__container" role="dialog" aria-modal="true" data-graph-target="registrationThanks">
+            <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+            <div class="cardthanks-content graph-modal__content">
+              Спасибо, мы вам перезвоним!
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="registration__image">
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  @include('partials/head.html')
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        @include('partials/catalog/breadcrumb.html')
+        @include('partials/catalog/catalog.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  </body>
+
+</html>

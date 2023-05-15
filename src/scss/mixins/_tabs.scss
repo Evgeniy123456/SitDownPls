@@ -1,0 +1,15 @@
+@mixin tabs {
+  .tabs__nav-btn--active {
+    background-color: var(--violet-primary-color);
+    color: var(--light-color);
+    border: 2px solid var(--violet-primary-color);
+  }
+
+  .tabs__panel {
+    display: none;
+  }
+
+  .tabs__panel--active {
+    display: grid;
+  }
+}
